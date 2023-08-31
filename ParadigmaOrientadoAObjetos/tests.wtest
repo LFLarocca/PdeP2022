@@ -1,0 +1,20 @@
+import catar.*
+
+describe "test de calificacion otorgada por un pastelero"{
+	
+	const juan = new Cocinero (especialidad = pastelero, nivelDulzorDeseado = 10)
+	const fideos = new Principal(azucar=16, bonito= false)
+	const flan = new Postre(cantColores= 4)
+	
+	test "la calificacion del pastelero juan es de 8 para los fideos" {
+		assert.equals(8, juan.calificar(fideos))
+	}
+	
+	test "la calificacion del pastelero juan es de 10, debido a que el calculo excede el máximo" {
+		assert.equals(10, juan.calificar(flan))
+	}	
+	
+	//No me dio el tiempo para hacer el resto de los test debido a que tuve que modificar errores,
+	// pero debería completar los casos con aquellos que ocurren cuando juan cambia de especialidad
+}
+
